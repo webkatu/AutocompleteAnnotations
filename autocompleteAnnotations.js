@@ -28,16 +28,16 @@
 		modelA.id = 'footnote';
 		modelA.href = '#annotation';
 		for(var i = 0; i < footnotes.length; i++) {
+			//脚注を指している注釈側のtitle属性に同じ説明を加える;
+			var annotation = document.getElementById('annotation' + i);
+			annotation.title = footnotes[i].textContent;
 			var a = modelA.cloneNode(true);
 			a.id += i;
 			a.href += i;
-			//脚注文字及び注釈の説明をa要素で囲む;
-			range.selectNodeContents(footnotes[i]);
-			range.surroundContents(a);
-
-			//脚注を指している注釈側のtitle属性に同じ説明を加える;
-			var annotation = document.getElementById('annotation' + i);
-			annotation.title = a.textContent;
+			a.textContent = annotation.textContent;
+			range.setStart(footnotes[i], 0);
+			range.insertNode(document.createTextNode('： '));
+			range.insertNode(a);
 		}
 	})();
 
