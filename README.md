@@ -5,4 +5,4 @@ AutocompleteAnnotations
 
 解説
 
-ブログ: [注釈・脚注を補完する「AutocompleteAnnotations」](http://webkatu.com/autocomplete-annotations/ "注釈・脚注を補完する「AutocompleteAnnotations」")
+ブログ: [注釈・脚注を補完する「AutocompleteAnnotations」](http://webkatu.com/archives/autocomplete-annotations/ "注釈・脚注を補完する「AutocompleteAnnotations」")
